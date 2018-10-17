@@ -2,8 +2,11 @@ var cells = document.querySelectorAll('.cell');
 var tourDuJoueur1 = true;
 var partieGagnee = false;
 var currentPlayer;
-var body = document.querySelector('body');
+var la = document.querySelector('.infojoueurs');
 var reset = document.querySelector('.reset');
+var newgame = document.querySelector('.newgame');
+var ScoreJoueur1 = 0;
+var ScoreJoueur2 = 0;
 
 var afficherSymbole = function(cells){
   //vérifié case remplie ou pas
@@ -34,15 +37,17 @@ var verifierCombinaisons = function(){
   ){
       if(tourDuJoueur1){
         currentPlayer = 'joueur 1';
+        ScoreJoueur1 = ScoreJoueur1 + 1;
       }else {
         currentPlayer = 'joueur 2';
+        ScoreJoueur2 = ScoreJoueur2 + 1;
       }
       partieGagnee =true;
       if(partieGagnee == true){
         var alert = document.createElement('div');
-  		  alert.innerHTML = 'le ' + currentPlayer + ' a gagné';
+  		  alert.innerHTML = 'Bravo ' + currentPlayer + ' !';
         alert.classList.add('alert');
-        body.appendChild(alert);
+        la.appendChild(alert);
       };
   };
 });
@@ -54,6 +59,19 @@ reset.addEventListener('click', function(){
   cell.classList.replace('castor','cell');
   console.log('tomate');
   partieGagnee = false;
+  ScoreJoueur1 = 0;
+  ScoreJoueur2 = 0;
+  document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
+  });
+});
+
+newgame.addEventListener('click', function(){
+  cells.forEach(function (cell) {
+  cell.classList.replace('dino','cell');
+  cell.classList.replace('castor','cell');
+  console.log('tomate');
+  partieGagnee = false;
+  document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
   });
 });
 

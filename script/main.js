@@ -3,6 +3,7 @@ var tourDuJoueur1 = true;
 var partieGagnee = false;
 var currentPlayer;
 var la = document.querySelector('.infojoueurs');
+var alert = document.querySelector('.alert');
 var reset = document.querySelector('.reset');
 var newgame = document.querySelector('.newgame');
 var ScoreJoueur1 = 0;
@@ -44,10 +45,8 @@ var verifierCombinaisons = function(){
       }
       partieGagnee =true;
       if(partieGagnee == true){
-        var alert = document.createElement('div');
   		  alert.innerHTML = 'Bravo ' + currentPlayer + ' !';
-        alert.classList.add('alert');
-        la.appendChild(alert);
+        alert.classList.replace('alert','visible');
       };
   };
 });
@@ -61,6 +60,7 @@ reset.addEventListener('click', function(){
   partieGagnee = false;
   ScoreJoueur1 = 0;
   ScoreJoueur2 = 0;
+  alert.classList.replace('visible', 'alert');
   document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
   });
 });
@@ -71,6 +71,7 @@ newgame.addEventListener('click', function(){
   cell.classList.replace('castor','cell');
   console.log('tomate');
   partieGagnee = false;
+  alert.classList.replace('visible', 'alert');
   document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
   });
 });

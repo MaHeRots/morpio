@@ -51,9 +51,13 @@ h1{
   background-repeat: no-repeat;
 }
 
-.alert{
+.visible{
   font-size: 1em;
   font-family: 'Lobster', cursive;
+}
+
+.alert{
+  display: none;
 }
 
 .reset{

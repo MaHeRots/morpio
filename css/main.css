@@ -1,0 +1,58 @@
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #e29126;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+}
+
+.morpio{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  flex: 1; /*occupe 1 sur la somme de tous les elements */
+  display: flex;
+}
+
+h1{
+  color: #e29126;
+  font-family: 'Lobster', cursive;
+  font-size: 1.7em;
+}
+
+.cell{
+  flex: 1;
+  background-color: #B3B3B3;
+  margin : 2px;
+
+}
+.castor{
+  flex: 1;
+  margin : 2px;
+  background-image: url('../assets/Castor.png');
+  background-size: cover;
+}
+.dino{
+  flex: 1;
+  margin : 2px;
+  background-image: url('../assets/Dino.png');
+  background-size: cover;
+}
+
+.alert{
+  font-size: 1em;
+  font-family: 'Lobster', cursive;
+}
+
+.reset{
+  font-size: 0.5em;
+}

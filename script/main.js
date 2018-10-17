@@ -37,10 +37,10 @@ var verifierCombinaisons = function(){
       cells[combinaison[2]].classList.contains('castor')
   ){
       if(tourDuJoueur1){
-        currentPlayer = 'joueur 1';
+        currentPlayer = 'Nani';
         ScoreJoueur1 = ScoreJoueur1 + 1;
       }else {
-        currentPlayer = 'joueur 2';
+        currentPlayer = 'Papy';
         ScoreJoueur2 = ScoreJoueur2 + 1;
       }
       partieGagnee =true;
@@ -61,7 +61,7 @@ reset.addEventListener('click', function(){
   ScoreJoueur1 = 0;
   ScoreJoueur2 = 0;
   alert.classList.replace('visible', 'alert');
-  document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
+  document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy : ' + ScoreJoueur2;
   });
 });
 
@@ -72,7 +72,7 @@ newgame.addEventListener('click', function(){
   console.log('tomate');
   partieGagnee = false;
   alert.classList.replace('visible', 'alert');
-  document.querySelector('.score').innerHTML = 'Joueur 1 : ' + ScoreJoueur1 + ' &emsp; Joueur 2 : ' + ScoreJoueur2;
+  document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy: ' + ScoreJoueur2;
   });
 });
 

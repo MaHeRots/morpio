@@ -7,8 +7,8 @@ body{
   min-height: 100vh;
   color: #e29126;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 2em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .morpio{
@@ -53,6 +53,35 @@ h1{
   /* transition: transform 4s; */
 }
 
+
+.animalio, .animalioselect{
+  max-width: 15%;
+  margin: 1%;
+}
+
+.animalio:hover, .animalioselect{
+  border: solid;
+  border-width: 6px;
+}
+
+.choixjoueursparent{
+  position: absolute;
+  margin-top: 5vh;
+  background-color: #fff;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+    max-width: 50vw;
+}
+
+.choixinvisible{
+display: none;
+}
+
+.choixjoueurs{
+  max-width: 50vw;
+}
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -67,17 +96,22 @@ h1{
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.visible{
+.alertvisible{
   font-size: 1em;
   font-family: 'Lobster', cursive;
   margin: 5px;
+}
+
+h2{
+  font-size: 1em;
+  font-family: 'Lobster', cursive;
 }
 
 .alert{
   display: none;
 }
 
-.reset, .newgame{
+.reset, .newgame, .play{
   font-size: 0.5em;
   background-color: #e29126;
   border: none;
@@ -91,6 +125,20 @@ h1{
   cursor: pointer;
 }
 
+.ok1, .ok2{
+  font-size: 0.1em;
+  background-color: #e29126;
+  border: none;
+  color: white;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+}
+
 .score{
   margin: 5px;
   font-size: 0.5em;
@@ -98,4 +146,10 @@ h1{
 
 .button{
   display: flex;
+}
+
+.play{
+  float: right; /*WHY ?*/
+  margin-top: 3vw;
+  width: 9vw;
 }

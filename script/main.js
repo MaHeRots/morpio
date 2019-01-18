@@ -106,26 +106,27 @@ lancement.addEventListener('click', function(){
 
 reset.addEventListener('click', function(){
   cells.forEach(function (cell) {
-  cell.classList.replace('dino','cell');
-  cell.classList.replace('castor','cell');
-  choix.classList.replace('choixinvisible', 'choixjoueursparent');
-  console.log('tomate');
-  partieGagnee = false;
-  ScoreJoueur1 = 0;
-  ScoreJoueur2 = 0;
-  alert.classList.replace('alertvisible', 'alert');
-  document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy : ' + ScoreJoueur2;
+    cell.classList.replace('dino','cell');
+    cell.classList.replace('castor','cell');
+    choix.classList.replace('choixinvisible', 'choixjoueursparent');
+    console.log('tomate');
+    partieGagnee = false;
+    ScoreJoueur1 = 0;
+    ScoreJoueur2 = 0;
+    alert.classList.replace('alertvisible', 'alert');
+    document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy : ' + ScoreJoueur2;
   });
 });
 
-newgame.addEventListener('click', function(){
+newgame.addEventListener('click', function(e){
+  console.log(e);
   cells.forEach(function (cell) {
-  cell.classList.replace('dino','cell');
-  cell.classList.replace('castor','cell');
-  console.log('tomate');
-  partieGagnee = false;
-  alert.classList.replace('alertvisible', 'alert');
-  document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy: ' + ScoreJoueur2;
+    cell.classList.replace('dino','cell');
+    cell.classList.replace('castor','cell');
+    console.log('tomate');
+    partieGagnee = false;
+    alert.classList.replace('alertvisible', 'alert');
+    document.querySelector('.score').innerHTML = 'Nani : ' + ScoreJoueur1 + ' &emsp; Papy: ' + ScoreJoueur2;
   });
 });
 
